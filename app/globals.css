@@ -1,8 +1,26 @@
 @import "tailwindcss";
 
 :root {
+  /* Base */
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Brand palette — VIT Online MCA */
+  --navy-900: #0c2350; /* deep navy — headline "VIT", counselling card, primary text */
+  --navy-800: #143a72; /* lighter navy — gradients, hover states on dark surfaces */
+  --gold-500: #f5b400; /* signature gold — "Online MCA", CTA button, accents */
+  --gold-600: #dd9f00; /* gold hover/active */
+  --gold-100: #fdf1cf; /* pale gold — icon chips, badge fills */
+  --cream-100: #f5f7fb; /* page backdrop behind the hero */
+  --ink-700: #1e2a3b; /* body copy on light surfaces */
+  --slate-500: #5b6677; /* muted/secondary copy */
+  --line-200: #e4e8f1; /* hairline borders, input outlines */
+
+  /* Secondary accents — used only in CTA/banner sections */
+  --periwinkle-100: #dfe7fb; /* light lavender CTA background */
+  --orange-500: #f2701d; /* "Request a Callback" button */
+  --green-600: #1da851; /* "Chat on WhatsApp" button */
+  --blue-600: #2d6cdf; /* "Start Your Success Story" banner */
 }
 
 @theme inline {
@@ -10,6 +28,21 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* expose brand tokens as Tailwind utilities, e.g. bg-navy-900, text-gold-500 */
+  --color-navy-900: var(--navy-900);
+  --color-navy-800: var(--navy-800);
+  --color-gold-500: var(--gold-500);
+  --color-gold-600: var(--gold-600);
+  --color-gold-100: var(--gold-100);
+  --color-cream-100: var(--cream-100);
+  --color-ink-700: var(--ink-700);
+  --color-slate-500: var(--slate-500);
+  --color-line-200: var(--line-200);
+  --color-periwinkle-100: var(--periwinkle-100);
+  --color-orange-500: var(--orange-500);
+  --color-green-600: var(--green-600);
+  --color-blue-600: var(--blue-600);
 }
 
 @media (prefers-color-scheme: dark) {
