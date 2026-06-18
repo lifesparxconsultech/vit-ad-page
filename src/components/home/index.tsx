@@ -44,13 +44,13 @@ export default function Hero() {
               Online programs.
             </p>
 
-            <ul className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
               {checklist.map((item) => (
                 <li
                   key={item}
-                  className="flex items-center gap-2 text-sm font-medium text-ink-700"
+                  className="flex items-center gap-3 text-base font-semibold text-ink-700"
                 >
-                  <CheckCircle2 className="h-4 w-4 flex-shrink-0 text-gold-500" />
+                  <CheckCircle2 className="h-5 w-5 flex-shrink-0 text-gold-500" />
                   {item}
                 </li>
               ))}

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const stories = [
   {
-    photo: "/student-1.jpg",
+    photo: "/student/student-1.png",
     flag: "🇱🇰",
     quote:
       "VIT has been more than just the source of a degree. The clubs, cultural events and opportunities helped me rediscover my passions and grow both personally and academically.",
@@ -13,7 +13,7 @@ const stories = [
     featured: false,
   },
   {
-    photo: "/student-2.jpg",
+    photo: "/student/student-2.png",
     flag: "🇨🇳",
     quote:
       "The campus environment is excellent, the faculty are supportive, and the International Office always helps students whenever needed. Studying at VIT has strengthened my future career prospects.",
@@ -23,7 +23,7 @@ const stories = [
     featured: true,
   },
   {
-    photo: "/student-3.jpg",
+    photo: "/student/student-3.png",
     flag: "🇨🇳",
     quote:
       "VIT provided me with opportunities to develop both technical and leadership skills. International exposure and internship opportunities helped me gain valuable experience and confidence.",
@@ -73,9 +73,9 @@ export default function SuccessStories() {
               <Image
                 src={story.photo}
                 alt={story.name}
-                className="h-full w-full bg-navy-900/10 object-cover"
-                width={100}
-                height={100}
+                fill
+                className="bg-navy-900/10 object-cover"
+                sizes="(max-width: 640px) 100vw, 33vw"
               />
               <span className="absolute right-3 top-3 text-2xl leading-none">
                 {story.flag}

@@ -8,6 +8,7 @@ import ProgramHighlights from "@/src/components/program-highlight";
 import SemesterCurriculum from "@/src/components/semester-curriculum";
 import Specializations from "@/src/components/specilization";
 import StartYourStory from "@/src/components/starty-our-story";
+import SuccessStories from "@/src/components/success-stories";
 import WhyChoose from "@/src/components/why-choose";
 
 
@@ -23,6 +24,7 @@ export default function Home(){
     <GlobalFaculty />
     <CareerTransformation />
     <CounsellorCta />
+    <SuccessStories />
     <StartYourStory />
     <Faq />
    </>
