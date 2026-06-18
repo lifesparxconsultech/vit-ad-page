@@ -13,20 +13,20 @@ export default function CounsellorCta() {
       </p>
 
       <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-        <button
-          type="button"
+        <a
+          href="#lead-form"
           className="rounded-full bg-orange-500 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-orange-500/30 transition-transform hover:scale-[1.02]"
         >
           Request a Callback
-        </button>
+        </a>
 
-        <button
-          type="button"
+        <a
+          href="#lead-form"
           className="flex items-center gap-2 rounded-full bg-green-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-green-600/30 transition-transform hover:scale-[1.02]"
         >
           Chat on WhatsApp
           <MessageSquare className="h-4 w-4" />
-        </button>
+        </a>
       </div>
     </section>
   );

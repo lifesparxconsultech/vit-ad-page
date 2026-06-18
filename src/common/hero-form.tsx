@@ -81,7 +81,7 @@ export default function HeroForm() {
   }
 
 return (
-  <div className="relative mx-auto w-full max-w-4xl">
+  <div id="lead-form" className="relative mx-auto w-full max-w-4xl scroll-mt-24">
     <span className="absolute -top-3 left-6 rounded-full bg-gold-500 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-navy-900 shadow">
       Limited Seats
     </span>

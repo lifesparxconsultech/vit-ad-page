@@ -15,12 +15,12 @@ export default function Header() {
           />
         </div>
 
-        <button
-          type="button"
+        <a
+          href="#lead-form"
           className="flex-shrink-0 rounded-full bg-gold-500 px-6 py-2.5 text-sm font-bold text-navy-900 transition-colors hover:bg-gold-600"
         >
           Talk to a Counsellor
-        </button>
+        </a>
       </div>
     </header>
   );

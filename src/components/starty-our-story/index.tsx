@@ -13,18 +13,18 @@ export default function StartYourStory() {
         </p>
 
         <div className="mt-7 flex flex-wrap items-center justify-center gap-4">
-          <button
-            type="button"
+          <a
+            href="#lead-form"
             className="rounded-lg bg-white px-6 py-3 text-sm font-bold text-blue-600"
           >
             Explore MCA Program
-          </button>
-          <button
-            type="button"
+          </a>
+          <a
+            href="#lead-form"
             className="rounded-lg border border-white/60 px-6 py-3 text-sm font-bold text-white"
           >
             Download Brochure
-          </button>
+          </a>
         </div>
       </div>
 

@@ -1,8 +1,15 @@
-import { Phone, Mail, GraduationCap } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
 import Image from "next/image";
-
-const quickLinks = ["Admission Process", "Fee Details", "Specializations", "Contact Us"];
-const legalLinks = ["Privacy Policy", "Terms of Use", "Disclaimer"];
+import Link from "next/link";
+const quickLinks = [
+  { label: "About Us", href: "https://educollege.in/about" },
+  { label: "Contact Us", href: "https://educollege.in/contact" },
+  { label: "Disclaimer", href: "/disclaimer" },
+];
+const legalLinks = [
+  { label: "Privacy Policy", href: "https://educollege.in/privacy-policy" },
+  { label: "Terms of Service", href: "https://educollege.in/terms-of-service" },
+];
 
 export default function Footer() {
     return (
@@ -45,12 +52,12 @@ export default function Footer() {
                         </p>
                         <ul className="mt-4 space-y-3">
                             {quickLinks.map((link) => (
-                                <li key={link}>
+                                <li key={link.label}>
                                     <a
-                                        href="#"
+                                        href={link.href}
                                         className="text-sm font-medium text-white/80 hover:text-white"
                                     >
-                                        {link}
+                                        {link.label}
                                     </a>
                                 </li>
                             ))}
@@ -65,7 +72,7 @@ export default function Footer() {
                         <ul className="mt-4 space-y-3">
                             <li className="flex items-center gap-2 text-sm font-medium text-white/80">
                                 <Phone className="h-4 w-4 text-gold-500" />
-                                +91 63942 58442
+                                +91-8920854291
                             </li>
                             <li className="flex items-center gap-2 text-sm font-medium text-white/80">
                                 <Mail className="h-4 w-4 text-gold-500" />
@@ -93,13 +100,13 @@ export default function Footer() {
                     </p>
                     <div className="flex gap-6">
                         {legalLinks.map((link) => (
-                            <a
-                                key={link}
-                                href="#"
+                            <Link
+                                key={link.label}
+                                href={link.href}
                                 className="text-xs font-medium text-white/50 hover:text-white"
                             >
-                                {link}
-                            </a>
+                                {link.label}
+                            </Link>
                         ))}
                     </div>
                 </div>
