@@ -27,11 +27,6 @@ export default function Hero() {
         <div className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-12">
           {/* Copy column */}
           <div>
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/90 px-4 py-1.5 text-xs font-semibold text-navy-900 shadow-sm ring-1 ring-line-200">
-              <Trophy className="h-3.5 w-3.5 text-gold-500" />
-              UGC Entitled | AICTE Approved University
-            </span>
-
             <h1 className="mt-6 text-5xl font-extrabold leading-[1.05] tracking-tight text-navy-900 sm:text-6xl">
               VIT <span className="text-gold-500">Online MCA</span>
             </h1>
