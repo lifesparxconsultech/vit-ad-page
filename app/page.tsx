@@ -25,7 +25,7 @@ export default function Home(){
     <CareerTransformation />
     <CounsellorCta />
     <SuccessStories />
-    <StartYourStory />
+    {/* <StartYourStory /> */}
     <Faq />
    </>
   )
