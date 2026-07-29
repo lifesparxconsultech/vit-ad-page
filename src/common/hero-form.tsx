@@ -60,28 +60,31 @@ export default function HeroForm() {
     return Object.keys(e).length === 0;
   }
 
-  async function handleSubmit() {
-    if (!validate()) return;
-    setStatus("loading");
-    try {
-      await fetch(APPS_SCRIPT_URL, {
-        method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          timestamp: new Date().toISOString(),
-          fullName: form.fullName,
-          phone: form.phone,
-          course: form.course,
-          email: form.email,
-          source: "Hero Form",
-        }),
-      });
-      router.push("/thank-you");
-    } catch {
-      setStatus("error");
-    }
+async function handleSubmit() {
+  if (!validate()) return;
+  setStatus("loading");
+  try {
+    const res = await fetch("/api/submit-lead", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        fullName: form.fullName,
+        phone: form.phone,
+        email: form.email,
+        course: form.course,
+        formName: "VIT Online Hero Form",
+        source: "VIT Landing Page",
+      }),
+    });
+
+    const data = await res.json();
+    if (!res.ok || !data.ok) throw new Error(data.error || "Submit failed");
+
+    router.push("/thank-you");
+  } catch {
+    setStatus("error");
   }
+}
 
   return (
     <div id="lead-form" className="relative mx-auto w-full max-w-4xl scroll-mt-24">
